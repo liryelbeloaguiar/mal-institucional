@@ -1,0 +1,12 @@
+<article class="icon-card">
+  <div class="icon-card__top">
+    <span class="icon-card__icon"
+      ><svg [lucideIcon]="icon()" size="22" aria-hidden="true"></svg
+    ></span>
+    @if (index()) {
+      <span class="icon-card__index">{{ index() }}</span>
+    }
+  </div>
+  <h3>{{ title() }}</h3>
+  <p>{{ description() }}</p>
+</article>

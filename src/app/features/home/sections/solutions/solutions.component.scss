@@ -1,0 +1,109 @@
+@use '../../../../../styles/variables' as *;
+.solutions {
+  padding-block: clamp(5rem, 9vw, 8.5rem);
+  overflow: hidden;
+  background: $color-primary-dark;
+}
+.solutions__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.solution-card {
+  position: relative;
+  display: flex;
+  min-height: 475px;
+  flex-direction: column;
+  padding: 1.8rem;
+  overflow: hidden;
+  border: 1px solid #24415d;
+  background: #092642;
+  color: #fff;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+.solution-card::after {
+  position: absolute;
+  right: -3.5rem;
+  bottom: -3.5rem;
+  width: 9rem;
+  height: 9rem;
+  border: 1px solid rgba(152, 209, 19, 0.12);
+  border-radius: 50%;
+  content: '';
+  transition: transform 0.3s ease;
+}
+.solution-card:hover {
+  transform: translateY(-6px);
+  border-color: #47647f;
+  background: #0b2c4d;
+}
+.solution-card:hover::after {
+  transform: scale(1.35);
+}
+.solution-card__head,
+.solution-card__foot {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.solution-card__head {
+  color: $color-accent;
+}
+.solution-card__head > span {
+  color: #708aa2;
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+.solution-card__body {
+  margin-block: auto;
+}
+.solution-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+.solution-card__body strong {
+  display: block;
+  max-width: 290px;
+  margin-bottom: 1.1rem;
+  color: #dbe4eb;
+  font-size: 1rem;
+}
+.solution-card p {
+  color: #8fa4b7;
+  font-size: 0.9rem;
+}
+.solution-card__foot {
+  padding-top: 1.2rem;
+  border-top: 1px solid #29445e;
+  color: #7990a5;
+}
+.solution-card__foot span {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.solution-card__foot i {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: $color-accent;
+  box-shadow: 0 0 10px rgba(152, 209, 19, 0.5);
+}
+@media (max-width: 900px) {
+  .solutions__grid {
+    grid-template-columns: 1fr;
+  }
+  .solution-card {
+    min-height: 380px;
+  }
+}

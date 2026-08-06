@@ -1,0 +1,9 @@
+<span class="brand" [class.brand--compact]="compact()">
+  <img [src]="'assets/logos/mal-symbol-' + theme() + '.svg'" alt="" aria-hidden="true" />
+  <span class="brand__type">
+    <strong>MAL</strong>
+    @if (!compact()) {
+      <small>tecnologia sob medida</small>
+    }
+  </span>
+</span>

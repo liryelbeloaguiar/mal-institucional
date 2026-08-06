@@ -1,0 +1,32 @@
+<a class="skip-link" href="#conteudo">Ir para o conteudo</a>
+<header
+  class="site-header"
+  [class.site-header--scrolled]="isScrolled()"
+  [class.site-header--open]="menuOpen()"
+>
+  <div class="container site-header__inner">
+    <a href="#inicio" aria-label="MAL Tecnologia, ir ao início" (click)="closeMenu()"
+      ><app-brand-logo theme="light"
+    /></a>
+    <nav id="main-navigation" [class.is-open]="menuOpen()" aria-label="Navegação principal">
+      @for (link of links; track link.href) {
+        <a [href]="link.href" (click)="closeMenu()">{{ link.label }}</a>
+      }
+      <a class="header-cta" href="#contato" (click)="closeMenu()">Fale com a MAL</a>
+    </nav>
+    <button
+      class="menu-toggle"
+      type="button"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen()"
+      aria-controls="main-navigation"
+      [attr.aria-label]="menuOpen() ? 'Fechar menu' : 'Abrir menu'"
+    >
+      @if (menuOpen()) {
+        <svg lucideX size="24" aria-hidden="true"></svg>
+      } @else {
+        <svg lucideMenu size="24" aria-hidden="true"></svg>
+      }
+    </button>
+  </div>
+</header>

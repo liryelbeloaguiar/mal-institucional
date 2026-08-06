@@ -1,0 +1,21 @@
+<section id="processo" class="process">
+  <div class="container">
+    <app-section-header
+      eyebrow="Nosso processo"
+      title="Um caminho claro do problema à evolução"
+      description="Colaboração próxima, decisões transparentes e uma entrega construída em etapas objetivas."
+      [centered]="true"
+    />
+    <div class="process__timeline">
+      @for (step of steps; track step.number) {
+        <article>
+          <div class="process__marker">
+            <span>{{ step.number }}</span>
+          </div>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.description }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>

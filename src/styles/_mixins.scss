@@ -1,0 +1,8 @@
+@mixin container {
+  width: min(calc(100% - 2.5rem), 1180px);
+  margin-inline: auto;
+}
+
+@mixin section-space {
+  padding-block: clamp(5rem, 9vw, 8.5rem);
+}

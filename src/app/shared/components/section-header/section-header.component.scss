@@ -1,0 +1,21 @@
+.section-header {
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+.section-header--light .eyebrow {
+  color: #b5ea23;
+}
+.section-header--light .section-title {
+  color: #fff;
+}
+.section-header--light .section-copy {
+  color: #aebed0;
+}
+.section-header--centered {
+  text-align: center;
+}
+.section-header--centered .eyebrow {
+  justify-content: center;
+}
+.section-header--centered :is(.section-title, .section-copy) {
+  margin-inline: auto;
+}

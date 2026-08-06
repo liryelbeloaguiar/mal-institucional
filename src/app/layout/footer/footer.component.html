@@ -1,0 +1,36 @@
+<footer class="footer">
+  <div class="container footer__main">
+    <div>
+      <app-brand-logo theme="light" />
+      <p>
+        Tecnologia sob medida para transformar desafios reais em produtos digitais consistentes.
+      </p>
+    </div>
+    <div>
+      <strong>Navegue</strong><a href="#empresa">A empresa</a><a href="#solucoes">Soluções</a
+      ><a href="#processo">Processo</a><a href="#contato">Contato</a>
+    </div>
+    <div>
+      <strong>Contato</strong
+      ><a [href]="'mailto:' + contact.email"
+        >{{ contact.email }} <svg lucideArrowUpRight size="14" aria-hidden="true"></svg></a
+      ><a [href]="contact.whatsappUrl"
+        >{{ contact.whatsappLabel }} <svg lucideArrowUpRight size="14" aria-hidden="true"></svg
+      ></a>
+    </div>
+    <div>
+      <strong>Social</strong>
+      <div class="social">
+        <a [href]="contact.linkedinUrl" aria-label="LinkedIn"
+          ><svg lucideLink size="19" aria-hidden="true"></svg></a
+        ><a [href]="contact.instagramUrl" aria-label="Instagram"
+          ><svg lucideAtSign size="19" aria-hidden="true"></svg
+        ></a>
+      </div>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <span>© {{ currentYear }} MAL Tecnologia. Todos os direitos reservados.</span
+    ><a href="#inicio">Voltar ao topo ↑</a>
+  </div>
+</footer>

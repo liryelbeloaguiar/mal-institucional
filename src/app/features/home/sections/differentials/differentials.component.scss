@@ -1,0 +1,21 @@
+@use '../../../../../styles/variables' as *;
+.differentials {
+  padding-block: clamp(5rem, 9vw, 8.5rem);
+  background: $color-background;
+}
+.differentials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: $color-border;
+}
+@media (max-width: 800px) {
+  .differentials__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 520px) {
+  .differentials__grid {
+    grid-template-columns: 1fr;
+  }
+}

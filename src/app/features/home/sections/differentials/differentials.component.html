@@ -1,0 +1,14 @@
+<section id="diferenciais" class="differentials">
+  <div class="container">
+    <app-section-header
+      eyebrow="Diferenciais"
+      title="Qualidade que aparece no produto e permanece no código"
+      description="Escolhas técnicas conscientes para entregar valor agora sem limitar o que vem depois."
+    />
+    <div class="differentials__grid">
+      @for (item of differentials; track item.title) {
+        <app-icon-card [title]="item.title" [description]="item.description" [icon]="item.icon" />
+      }
+    </div>
+  </div>
+</section>

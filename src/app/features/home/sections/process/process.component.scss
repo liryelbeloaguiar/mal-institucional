@@ -1,0 +1,74 @@
+@use '../../../../../styles/variables' as *;
+.process {
+  padding-block: clamp(5rem, 9vw, 8.5rem);
+  background: #fff;
+}
+.process__timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+.process__timeline::before {
+  position: absolute;
+  top: 1.3rem;
+  right: 9%;
+  left: 9%;
+  height: 1px;
+  background: $color-border;
+  content: '';
+}
+.process article {
+  position: relative;
+  text-align: center;
+}
+.process__marker {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  width: 2.7rem;
+  height: 2.7rem;
+  margin: 0 auto 1.8rem;
+  place-items: center;
+  border: 1px solid $color-accent;
+  background: #fff;
+  color: $color-primary;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+.process h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+.process p {
+  margin: 0;
+  color: $color-text-muted;
+  font-size: 0.86rem;
+}
+@media (max-width: 760px) {
+  .process__timeline {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .process__timeline::before {
+    top: 0;
+    bottom: 0;
+    left: 1.3rem;
+    width: 1px;
+    height: auto;
+  }
+  .process article {
+    display: grid;
+    grid-template-columns: 2.7rem 1fr;
+    gap: 0 1.4rem;
+    padding-bottom: 2.5rem;
+    text-align: left;
+  }
+  .process__marker {
+    grid-row: 1 / 3;
+    margin: 0;
+  }
+  .process h3 {
+    align-self: end;
+  }
+}

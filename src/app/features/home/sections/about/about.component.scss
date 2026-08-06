@@ -1,0 +1,95 @@
+@use '../../../../../styles/variables' as *;
+.about {
+  padding-block: clamp(5rem, 9vw, 8.5rem);
+  background: #fff;
+}
+.about__intro {
+  display: flex;
+  justify-content: flex-end;
+}
+.about__intro app-section-header {
+  width: min(100%, 780px);
+}
+.about__layout {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: clamp(3rem, 8vw, 8rem);
+}
+.about__statement {
+  position: relative;
+  min-height: 420px;
+  padding: 2.5rem;
+  overflow: hidden;
+  background: $color-primary-dark;
+  color: #fff;
+}
+.about__statement > span {
+  position: relative;
+  z-index: 2;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  font-weight: 500;
+  line-height: 1.08;
+}
+.about__statement strong {
+  color: $color-accent;
+  font-weight: 600;
+}
+.about__statement img {
+  position: absolute;
+  right: -8%;
+  bottom: -10%;
+  width: 68%;
+  opacity: 0.12;
+  filter: grayscale(1) brightness(5);
+}
+.about__content > p {
+  max-width: 690px;
+  margin-bottom: 3.5rem;
+  color: $color-text-muted;
+  font-size: 1.13rem;
+}
+.about__highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: $color-border;
+}
+.about__highlights article {
+  position: relative;
+  padding: 1.5rem;
+  background: #fff;
+}
+.about__highlights article > span {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #a9b6c1;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+.about__highlights lucide-icon {
+  color: $color-accent;
+}
+.about__highlights h3 {
+  margin: 2rem 0 0.7rem;
+  font-size: 1rem;
+}
+.about__highlights p {
+  margin: 0;
+  color: $color-text-muted;
+  font-size: 0.83rem;
+  line-height: 1.55;
+}
+@media (max-width: 900px) {
+  .about__layout {
+    grid-template-columns: 1fr;
+  }
+  .about__statement {
+    min-height: 300px;
+  }
+}
+@media (max-width: 620px) {
+  .about__highlights {
+    grid-template-columns: 1fr;
+  }
+}

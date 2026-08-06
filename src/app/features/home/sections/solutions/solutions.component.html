@@ -1,0 +1,29 @@
+<section id="solucoes" class="solutions">
+  <div class="container">
+    <app-section-header
+      eyebrow="Em construção"
+      title="Produtos que nascem de problemas concretos"
+      description="Iniciativas proprietárias da MAL, criadas com método e preparadas para evoluir. Alguns detalhes seguem reservados enquanto construímos."
+      [light]="true"
+    />
+  </div>
+  <div class="container solutions__grid">
+    @for (solution of solutions; track solution.name) {
+      <article class="solution-card">
+        <div class="solution-card__head">
+          <span>{{ solution.code }}</span
+          ><svg [lucideIcon]="solution.icon" size="28" aria-hidden="true"></svg>
+        </div>
+        <div class="solution-card__body">
+          <h3>{{ solution.name }}</h3>
+          <strong>{{ solution.headline }}</strong>
+          <p>{{ solution.description }}</p>
+        </div>
+        <div class="solution-card__foot">
+          <span><i></i>{{ solution.status }}</span
+          ><svg lucideArrowUpRight size="19" aria-hidden="true"></svg>
+        </div>
+      </article>
+    }
+  </div>
+</section>

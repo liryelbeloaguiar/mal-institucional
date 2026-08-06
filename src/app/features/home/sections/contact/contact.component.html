@@ -1,0 +1,83 @@
+<section id="contato" class="contact">
+  <div class="container contact__layout">
+    <div class="contact__info">
+      <app-section-header
+        eyebrow="Contato"
+        title="Vamos entender o seu próximo projeto"
+        description="Compartilhe o contexto. A primeira conversa é sobre entender o desafio e avaliar como a tecnologia pode ajudar."
+      />
+      <div class="contact__channels">
+        <a [href]="'mailto:' + contact.email">
+          <span><svg lucideMail size="21" aria-hidden="true"></svg></span>
+          <div>
+            <small>E-mail</small><strong>{{ contact.email }}</strong>
+          </div>
+        </a>
+        <a [href]="contact.whatsappUrl" target="_blank" rel="noopener noreferrer">
+          <span><svg lucideMessageCircle size="21" aria-hidden="true"></svg></span>
+          <div>
+            <small>WhatsApp</small><strong>{{ contact.whatsappLabel }}</strong>
+          </div>
+        </a>
+      </div>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+      <div class="form-row">
+        <label>
+          Nome *
+          <input
+            type="text"
+            formControlName="name"
+            autocomplete="name"
+            placeholder="Como podemos chamar você?"
+            [attr.aria-invalid]="form.controls.name.invalid && form.controls.name.touched"
+          />
+        </label>
+        <label>
+          Empresa
+          <input
+            type="text"
+            formControlName="company"
+            autocomplete="organization"
+            placeholder="Nome da empresa (opcional)"
+          />
+        </label>
+      </div>
+      <label>
+        E-mail *
+        <input
+          type="email"
+          formControlName="email"
+          autocomplete="email"
+          placeholder="voce@empresa.com"
+          [attr.aria-invalid]="form.controls.email.invalid && form.controls.email.touched"
+        />
+      </label>
+      <label>
+        Mensagem *
+        <textarea
+          formControlName="message"
+          rows="5"
+          placeholder="Conte um pouco sobre o desafio"
+          [attr.aria-invalid]="form.controls.message.invalid && form.controls.message.touched"
+        ></textarea>
+      </label>
+      @if (form.invalid && attempted()) {
+        <p class="form-message form-message--error" role="alert">
+          Revise os campos obrigatórios antes de continuar.
+        </p>
+      }
+      @if (submitted()) {
+        <p class="form-message form-message--success" role="status">
+          Mensagem validada. A integração de envio será conectada em breve.
+        </p>
+      }
+      <button type="submit">
+        <span>Enviar mensagem</span><svg lucideSend size="18" aria-hidden="true"></svg>
+      </button>
+      <small class="form-note"
+        >Formulário demonstrativo. Nenhum dado é enviado neste momento.</small
+      >
+    </form>
+  </div>
+</section>

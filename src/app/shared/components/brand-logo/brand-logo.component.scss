@@ -1,0 +1,33 @@
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: inherit;
+}
+.brand img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.brand__type {
+  display: grid;
+  line-height: 1;
+}
+.brand strong {
+  font-size: 1.45rem;
+  letter-spacing: 0.08em;
+}
+.brand small {
+  margin-top: 0.3rem;
+  font-size: 0.61rem;
+  letter-spacing: 0.08em;
+  opacity: 0.72;
+}
+.brand--compact img {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+@media (max-width: 400px) {
+  .brand small {
+    display: none;
+  }
+}

@@ -1,0 +1,230 @@
+@use '../../../../../styles/variables' as *;
+.hero {
+  position: relative;
+  min-height: min(900px, 100svh);
+  overflow: hidden;
+  background: radial-gradient(
+    circle at 78% 44%,
+    #0d3b67 0,
+    $color-primary-dark 32%,
+    $color-primary-deep 70%
+  );
+  color: #fff;
+}
+.hero__grid {
+  position: absolute;
+  inset: 0 0 0 45%;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: linear-gradient(90deg, transparent, #000);
+}
+.hero__inner {
+  position: relative;
+  display: grid;
+  min-height: min(900px, 100svh);
+  align-items: center;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  padding-block: 8rem 5.5rem;
+}
+.hero__content {
+  position: relative;
+  z-index: 2;
+}
+.hero__kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1.6rem;
+  color: #aebfd1;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.hero__kicker i {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: $color-accent;
+  box-shadow: 0 0 18px rgba(181, 234, 35, 0.6);
+}
+h1 {
+  max-width: 760px;
+  margin-bottom: 1.6rem;
+  font-size: clamp(3rem, 6vw, 5.75rem);
+  font-weight: 600;
+}
+h1 em {
+  color: $color-accent-bright;
+  font-style: normal;
+}
+.hero__content > p {
+  max-width: 650px;
+  margin-bottom: 2.4rem;
+  color: #b4c2d0;
+  font-size: clamp(1rem, 1.5vw, 1.18rem);
+}
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+.hero__meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3.2rem;
+  color: #748ba2;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+.hero__meta i {
+  width: 1.7rem;
+  height: 1px;
+  background: #35516c;
+}
+.hero__visual {
+  position: relative;
+  display: grid;
+  aspect-ratio: 1;
+  place-items: center;
+}
+.hero__visual::before {
+  position: absolute;
+  width: 76%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 50%;
+  content: '';
+}
+.hero__visual::after {
+  position: absolute;
+  width: 52%;
+  aspect-ratio: 1;
+  border: 1px dashed rgba(181, 234, 35, 0.28);
+  border-radius: 50%;
+  content: '';
+  animation: float 5s ease-in-out infinite;
+}
+.hero__visual img {
+  position: relative;
+  z-index: 2;
+  width: 42%;
+  filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.25));
+  animation: float 6s ease-in-out infinite;
+}
+.hero__orbit {
+  position: absolute;
+  inset: 6%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+}
+.hero__orbit span {
+  position: absolute;
+  padding: 0.25rem 0.5rem;
+  background: $color-primary-dark;
+  color: #708ba4;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.hero__orbit span:nth-child(1) {
+  top: 12%;
+  left: 10%;
+}
+.hero__orbit span:nth-child(2) {
+  right: 4%;
+  bottom: 28%;
+}
+.hero__orbit span:nth-child(3) {
+  bottom: 5%;
+  left: 20%;
+}
+.hero__label {
+  position: absolute;
+  right: 0;
+  bottom: 14%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem;
+  border-left: 2px solid $color-accent;
+  background: rgba(3, 18, 38, 0.78);
+}
+.hero__label strong {
+  color: $color-accent;
+  font-size: 1.5rem;
+}
+.hero__label span {
+  color: #8297aa;
+  font-size: 0.57rem;
+  letter-spacing: 0.1em;
+}
+.hero__signal {
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  transform-origin: left;
+  background: $color-accent;
+  animation: pulse-line 4s infinite;
+}
+.hero__signal--one {
+  top: 24%;
+  right: 3%;
+}
+.hero__signal--two {
+  right: 42%;
+  bottom: 10%;
+  width: 50px;
+  animation-delay: 1s;
+}
+.hero__scroll {
+  position: absolute;
+  right: 2.5rem;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #7890a6;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+@media (max-width: 920px) {
+  .hero {
+    min-height: auto;
+  }
+  .hero__inner {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    padding-block: 9rem 5rem;
+  }
+  .hero__content {
+    max-width: 720px;
+  }
+  .hero__visual {
+    display: none;
+  }
+  .hero__scroll {
+    display: none;
+  }
+}
+@media (max-width: 520px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .hero__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .hero__meta {
+    gap: 0.55rem;
+  }
+  .hero__meta i {
+    width: 0.7rem;
+  }
+}

@@ -1,0 +1,19 @@
+<section class="services">
+  <div class="container services__layout">
+    <app-section-header
+      eyebrow="O que desenvolvemos"
+      title="Tecnologia para operar melhor e crescer com clareza"
+      description="Projetamos cada camada da solução para conectar estratégia, experiência e engenharia."
+    />
+    <div class="services__grid">
+      @for (service of services; track service.title; let i = $index) {
+        <app-icon-card
+          [title]="service.title"
+          [description]="service.description"
+          [icon]="service.icon"
+          [index]="'0' + (i + 1)"
+        />
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,11 @@
+<header
+  class="section-header"
+  [class.section-header--light]="light()"
+  [class.section-header--centered]="centered()"
+>
+  <span class="eyebrow">{{ eyebrow() }}</span>
+  <h2 class="section-title">{{ title() }}</h2>
+  @if (description()) {
+    <p class="section-copy">{{ description() }}</p>
+  }
+</header>

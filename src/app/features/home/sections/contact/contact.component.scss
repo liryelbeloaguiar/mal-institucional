@@ -1,6 +1,6 @@
 @use '../../../../../styles/variables' as *;
 .contact {
-  padding-block: clamp(5rem, 9vw, 8.5rem);
+  padding-block: clamp(4rem, 8vw, 7.5rem);
   background: #fff;
 }
 .contact__layout {
@@ -132,5 +132,11 @@ button:hover {
   }
   button {
     width: 100%;
+  }
+  .contact__layout {
+    gap: 2rem;
+  }
+  form {
+    padding: 1.25rem;
   }
 }

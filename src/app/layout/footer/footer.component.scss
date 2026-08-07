@@ -65,6 +65,9 @@
   }
 }
 @media (max-width: 520px) {
+  .footer {
+    padding-top: 3.5rem;
+  }
   .footer__main {
     grid-template-columns: 1fr;
     gap: 2rem;

@@ -16,7 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.75rem;
 }
 .icon-card__icon {
   display: grid;
@@ -41,4 +41,12 @@ p {
   color: $color-text-muted;
   font-size: 0.92rem;
   line-height: 1.6;
+}
+@media (max-width: 520px) {
+  .icon-card {
+    padding: 1.35rem;
+  }
+  .icon-card__top {
+    margin-bottom: 1.1rem;
+  }
 }

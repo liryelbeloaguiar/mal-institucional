@@ -1,6 +1,6 @@
 @use '../../../../../styles/variables' as *;
 .services {
-  padding-block: clamp(5rem, 9vw, 8.5rem);
+  padding-block: clamp(4rem, 8vw, 7.5rem);
   background: $color-background;
 }
 .services__layout {
@@ -22,5 +22,8 @@
 @media (max-width: 560px) {
   .services__grid {
     grid-template-columns: 1fr;
+  }
+  .services__layout {
+    gap: 1.5rem;
   }
 }

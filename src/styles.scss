@@ -76,7 +76,7 @@ h3 {
   max-width: 760px;
   margin-bottom: 1.25rem;
   color: $color-primary-dark;
-  font-size: clamp(2rem, 4.5vw, 3.65rem);
+  font-size: clamp(1.85rem, 3.6vw, 3.1rem);
   font-weight: 700;
 }
 .section-copy {
@@ -109,5 +109,16 @@ h3 {
 @media (max-width: 520px) {
   .container {
     width: min(calc(100% - 2rem), #{$container-width});
+  }
+  .eyebrow {
+    margin-bottom: 0.9rem;
+    font-size: 0.68rem;
+  }
+  .section-title {
+    margin-bottom: 0.9rem;
+    font-size: clamp(1.75rem, 9vw, 2.25rem);
+  }
+  .section-copy {
+    font-size: 0.95rem;
   }
 }

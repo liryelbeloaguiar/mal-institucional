@@ -1,6 +1,6 @@
 @use '../../../../../styles/variables' as *;
 .solutions {
-  padding-block: clamp(5rem, 9vw, 8.5rem);
+  padding-block: clamp(4rem, 8vw, 7.5rem);
   overflow: hidden;
   background: $color-primary-dark;
 }
@@ -105,5 +105,14 @@
   }
   .solution-card {
     min-height: 380px;
+  }
+}
+@media (max-width: 560px) {
+  .solution-card {
+    min-height: 340px;
+    padding: 1.4rem;
+  }
+  .solution-card h3 {
+    font-size: 1.65rem;
   }
 }

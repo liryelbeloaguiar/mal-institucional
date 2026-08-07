@@ -1,6 +1,6 @@
 @use '../../../../../styles/variables' as *;
 .process {
-  padding-block: clamp(5rem, 9vw, 8.5rem);
+  padding-block: clamp(4rem, 8vw, 7.5rem);
   background: #fff;
 }
 .process__timeline {
@@ -70,5 +70,8 @@
   }
   .process h3 {
     align-self: end;
+  }
+  .process article {
+    padding-bottom: 2rem;
   }
 }

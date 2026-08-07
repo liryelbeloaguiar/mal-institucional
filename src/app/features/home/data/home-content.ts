@@ -1,17 +1,14 @@
 import {
   LucideBlocks,
-  LucideBoxes,
   LucideBraces,
   LucideCheckCheck,
   LucideCircuitBoard,
-  LucideFingerprint,
   LucideGauge,
   LucideLayers3,
   LucideLockKeyhole,
   LucideNetwork,
   LucidePanelsTopLeft,
   LucideRefreshCw,
-  LucideRepeat2,
   LucideShieldCheck,
   LucideSparkles,
   LucideWorkflow,
@@ -73,8 +70,8 @@ export const SERVICES: readonly ContentCard[] = [
     icon: LucideBraces.icon,
   },
   {
-    title: 'Plataformas internas',
-    description: 'Ambientes centralizados para organizar operações e equipes.',
+    title: 'Plataformas e produtos digitais',
+    description: 'Ambientes claros para centralizar operações, equipes e serviços.',
     icon: LucidePanelsTopLeft.icon,
   },
   {
@@ -83,18 +80,8 @@ export const SERVICES: readonly ContentCard[] = [
     icon: LucideWorkflow.icon,
   },
   {
-    title: 'Experiências digitais',
-    description: 'Interfaces claras, acessíveis e projetadas para uso cotidiano.',
-    icon: LucideGauge.icon,
-  },
-  {
-    title: 'Produtos digitais',
-    description: 'Da descoberta a uma estrutura pronta para evoluir.',
-    icon: LucideBoxes.icon,
-  },
-  {
-    title: 'Integração entre sistemas',
-    description: 'Dados e ferramentas conectados em fluxos mais inteligentes.',
+    title: 'Integrações entre sistemas',
+    description: 'Ferramentas e dados conectados em um fluxo mais eficiente.',
     icon: LucideNetwork.icon,
   },
 ];
@@ -134,23 +121,13 @@ export const DIFFERENTIALS: readonly ContentCard[] = [
     icon: LucideCheckCheck.icon,
   },
   {
-    title: 'Componentes reutilizáveis',
-    description: 'Consistência e agilidade em cada nova evolução.',
-    icon: LucideRepeat2.icon,
-  },
-  {
     title: 'Interfaces responsivas',
-    description: 'Experiências eficientes em qualquer dispositivo.',
+    description: 'Uso simples e consistente em qualquer dispositivo.',
     icon: LucideGauge.icon,
   },
   {
     title: 'Segurança desde o início',
     description: 'Proteção considerada em arquitetura e implementação.',
     icon: LucideLockKeyhole.icon,
-  },
-  {
-    title: 'Comunicação próxima',
-    description: 'Visibilidade e alinhamento durante todo o projeto.',
-    icon: LucideFingerprint.icon,
   },
 ];

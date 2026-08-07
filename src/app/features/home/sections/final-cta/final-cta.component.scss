@@ -2,7 +2,7 @@
 .final-cta {
   position: relative;
   overflow: hidden;
-  padding-block: clamp(5rem, 8vw, 7rem);
+  padding-block: clamp(4rem, 7vw, 6rem);
   background: $color-primary-dark;
   color: #fff;
 }
@@ -30,7 +30,7 @@
 .final-cta h2 {
   max-width: 700px;
   margin: 0;
-  font-size: clamp(2.3rem, 5vw, 4.5rem);
+  font-size: clamp(2rem, 4.2vw, 3.75rem);
   font-weight: 600;
 }
 .final-cta h2 em {
